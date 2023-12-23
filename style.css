@@ -29,8 +29,8 @@
     justify-content: center;
 }
 .Calc{
-    max-height: 67%;
-    min-width: 20%;
+    height: 36rem;
+    width: 20rem;
     background-color:var(--primary-color);
     padding: 20px;
     border-radius: 10px;
@@ -41,7 +41,7 @@
 .Calc form div {
     width: 100%;
     display: flex;
-    padding: 5px 0;
+    padding: 10px 0;
     justify-content: space-between;
 }
 .Calc form input{
