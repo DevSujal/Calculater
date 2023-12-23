@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My First Project-Calculator</title>
+</head>
+<body>
+    <div class="container">
+       <div class="Calc">
+        <form>
+            <img src="icon/dark theme icon/sun.png" alt="image" id="icon">
+            <h1>Calculator</h1>
+            <div class="display">
+                <input type="text" name="display">
+            </div>
+            <div>
+                <input type="button" value="AC" onclick="display.value = '' " class="firstRow">
+                <input type="button" value="DE" onclick="display.value = display.value.toString().slice(0, -1)" class="firstRow">
+                <input type="button" value="%" onclick="display.value += '%' " class="firstRow">
+                <input type="button" value="/" onclick="display.value += '/' "class="firstRow">
+            </div>
+            <div>
+                <input type="button" value="7" onclick="display.value += '7' ">
+                <input type="button" value="8" onclick="display.value += '8' ">
+                <input type="button" value="9" onclick="display.value += '9' ">
+                <input type="button" value="*" onclick="display.value += '*' "class="lastColumn">
+            </div>
+            <div>
+                <input type="button" value="4" onclick="display.value += '4' ">
+                <input type="button" value="5" onclick="display.value += '5' ">
+                <input type="button" value="6" onclick="display.value += '6' ">
+                <input type="button" value="-" onclick="display.value += '-' " class="lastColumn">
+            </div>
+            <div>
+                <input type="button" value="1" onclick="display.value += '1' ">
+                <input type="button" value="2" onclick="display.value += '2' ">
+                <input type="button" value="3" onclick="display.value += '3' ">
+                <input type="button" value="+" onclick="display.value += '+' " class="lastColumn">
+            </div>
+            <div>
+                <input type="button" value="+/-" id="intake" onclick="display.value = eval(0-display.value) ">
+                <input type="button" value="0" onclick="display.value += '0' ">
+                <input type="button" value="." onclick="display.value += '.' ">
+                <input type="button" value="=" id="equal" onclick="display.value = eval(display.value) ">
+            </div>
+        </form>
+       </div>
+    </div>
+    <script>
+        var icon = document.getElementById("icon");
+        icon.onclick = function(){
+            document.body.classList.toggle("light-theme");
+           if(document.body.classList.contains("light-theme")){
+            icon.src="icon/dark theme icon/moon.png";
+           }
+           else{
+            icon.src="icon/dark theme icon/sun.png";
+           }
+        //    var intake = document.getElementById("intake");
+        //    intake.onclick = function(){
+        //     display.value = eval(0 - display.value)"; 
+        //    } 
+        }
+    </script>
+</body>
+</html>
