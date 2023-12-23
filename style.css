@@ -29,9 +29,20 @@
     justify-content: center;
 }
 .Calc{
+    max-height: 67%;
+    min-width: 20%;
     background-color:var(--primary-color);
     padding: 20px;
     border-radius: 10px;
+}
+.Calc form {
+    width: 100%;
+}
+.Calc form div {
+    width: 100%;
+    display: flex;
+    padding: 5px 0;
+    justify-content: space-between;
 }
 .Calc form input{
     border: 0;
@@ -44,13 +55,10 @@
     font-size: 20px;
     color:var(--seconary-color);
     cursor: pointer;
-    margin: 10px;
     transition: .5s;
-    /* border: 1px solid white; */
 }
 .calc form input[type = button]:hover{
     transform: scale(1.1);
-    /* border-radius: 20px; */
     background-color:var(--tertiary-color);
     color:var(--seconary-color);
     
