@@ -29,8 +29,9 @@
     justify-content: center;
 }
 .Calc{
+    margin: 10px;
     height: 36rem;
-    width: 20rem;
+    width: 22rem;
     background-color:var(--primary-color);
     padding: 20px;
     border-radius: 10px;
