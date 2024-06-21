@@ -1,4 +1,3 @@
-
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -109,6 +108,60 @@
           icon.src = "icon/dark theme icon/sun.webp";
         }
       };
+
+      const display = document.getElementsByTagName("input")[0];
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" && e.ctrlKey) {
+          display.value = eval(0 - eval(display.value));
+          return;
+        }
+        if (e.key === "Enter" || e.key === "=") {
+          display.value = eval(display.value);
+          return;
+        }
+
+        for (let i = 0; i < 10; i++) {
+          if (e.key === `${i}`) {
+            display.value += `${i}`;
+            return;
+          }
+        }
+
+        if (e.ctrlKey && e.key === "Backspace") {
+          display.value = "";
+          return;
+        }
+
+        if (e.key === "Backspace") {
+          display.value = display.value.toString().slice(0, -1);
+          return;
+        }
+        if (e.key === "+") {
+          display.value += "+";
+          return;
+        }
+        if (e.key === "-") {
+          display.value += "-";
+          return;
+        }
+        if (e.key === "/") {
+          display.value += "/";
+          return;
+        }
+        if (e.key === "*") {
+          display.value += "*";
+          return;
+        }
+        if (e.key === "%") {
+          display.value += "%";
+          return;
+        }
+        if (e.key === ".") {
+          display.value += ".";
+          return;
+        }
+      });
     </script>
   </body>
 </html>
